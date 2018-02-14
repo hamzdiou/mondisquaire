@@ -24,7 +24,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', 'a!=kw4=-%lrb_-$(+avw#2cl!7*j1&ceb5&o50*1x2!wgb+eey')
-#'2HP)h8R?Lpo"MM,Y9I[7xh?{'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('ENV') == 'PRODUCTION':
@@ -32,7 +31,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['mondisquaire.herokuapp.com']
+ALLOWED_HOSTS = ['disquairehamza.herokuapp.com']
 
 
 # Application definition
