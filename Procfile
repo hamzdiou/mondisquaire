@@ -1,1 +1,1 @@
-web: gunicorn disquaire_project.wsgi
+web: gunicorn intro_framework_django_Project.wsgi
