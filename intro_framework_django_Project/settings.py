@@ -30,8 +30,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
     DEBUG = False
 else:
     DEBUG = True
-
-ALLOWED_HOSTS = ['disquairehamza.herokuapp.com']
+ALLOWED_HOSTS = ['disquairehamza.herokuapp.com', '178.62.213.64']
 
 
 # Application definition
