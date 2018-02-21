@@ -4,6 +4,10 @@ from store.models import Album, Artist, Contact, Booking
 from store.forms import ContactForm, ParagraphErrorList
 from django.db import transaction, IntegrityError
 
+import logging
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
 def index(request):
     albums = Album.objects.filter(available=True).order_by('-created_at')[:12]
     context = {
@@ -106,4 +110,9 @@ def search(request):
         'albums': albums,
         'title': title
     }
+
+    logger.info('New Search', exc_info=True, extra={
+        # Optionally pass a request and we'll grab any information we can
+        'request': request,
+    })
     return render(request, 'store/search.html', context)
