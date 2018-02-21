@@ -5,13 +5,13 @@ python:
 before_script:
   - pip install -r requirements.txt
 
-env: DJANGO_SETTINGS_MODULE="intro_framework_django_Project.settings"
+env: DJANGO_SETTINGS_MODULE=intro_framework_django_Project.settings.travis
 
 services:
   - postgresql
 
 script:
-  - ./manage.py test
+  - python manage.py test
 
 # safelist
 branches:
